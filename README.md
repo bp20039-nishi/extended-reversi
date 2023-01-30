@@ -1,6 +1,6 @@
 # 「拡張リバーシ」(extended-reversi)
 ## アプリの説明
-**「拡張リバーシ 」**:サーバー3つとプレイヤー間での双方向通信を用いたwebアプリケーション。通常のリバーシに加えていくつかの特殊ルールを加えたリバーシゲーム。
+**「拡張リバーシ 」**:サーバー3つとプレイヤー間での双方向通信を用いたwebアプリケーション。通常のリバーシに加えていくつかの特殊ルールを加えたリバーシゲーム。(Java8で実装)
 ## ゲームのルール
 通常のリバーシと異なる点について
 
@@ -24,6 +24,15 @@
 
 Eclipseを用いて実装＆テストプレイを行っています。
 
-サーバの起動順：DatabaseServer -> ApplicationServer -> LobbyServer -> Player
+
+**サーバの起動順**
+  
+  DatabaseServer/src/dbserver/DBServerMain.java
+  
+  -> ApplicationServer/src/all/ApplicationServer.java
+  
+  -> LobbyServer/src/lobbyserver/LobbyServerMain.java
+  
+  -> Player/src/pkg/Main.java
 
 ２つのプレイヤーを起動し、それぞれログイン（またはサインアップ）、マッチングを行うとゲームが開始する
